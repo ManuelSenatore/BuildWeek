@@ -1,0 +1,55 @@
+{
+    "posts": [{
+        "id": 0,
+        "autore": 0,
+        "title": "test",
+        "body": "lorem ipsum dolor"
+    }
+    ,{
+      "id": 1,
+      "autore": 2,
+      "title": "poppo",
+      "body": "se of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+  },
+{
+      "id": 2,
+      "autore": 1,
+      "title": "lalllaal",
+      "body": "se of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+  }
+  ],
+    "comments": [
+        {
+            "id": 0,
+            "idPost": 0,
+            "idUser": 0,
+            "body": "lorem ipsum dolor"
+        }
+    ],
+    "users": [{
+        "id": 0,
+        "username": "test",
+        "email": "test@test.test",
+        "password": "???",
+        "name": "Test test",
+        "age": 20
+    }
+    ,{
+      "id": 1,
+      "username": "gioacchino69",
+      "email": "gio@chino.nochio",
+      "password": "csadsadsadsad",
+      "name": "gioacchino69 mariottide",
+      "age": 20
+  },
+{
+      "id": 2,
+      "username": "sara88",
+      "email": "sa@ra.futuro",
+      "password": "csadsadsadsad",
+      "name": "sara banda",
+      "age": 20
+  }
+  ]
+
+}

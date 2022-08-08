@@ -1,0 +1,8 @@
+app-post{
+  position: relative;
+  bottom: 400px;
+  @media screen and (max-width: 1024px){
+    bottom: 200px;
+
+  }
+}
