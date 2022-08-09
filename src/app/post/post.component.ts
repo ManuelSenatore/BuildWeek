@@ -18,7 +18,8 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     this.post$.arrayPostGet();
     this.sub = this.post$.obs.subscribe((res)=>{
-       this.arrayPost = res})
+       this.arrayPost = res
+      })
       }
 
   }

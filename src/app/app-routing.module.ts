@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { CommentiComponent } from './commenti/commenti.component';
-import { DettagliComponent } from './dettagli/dettagli.component';
 import { E404Component } from './e404/e404.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -26,10 +25,6 @@ const routes: Routes = [
     path: 'user',
     component: UserComponent,
     canActivate: [AuthGuard]
-  },
-  {
-    path: 'dettagli',
-    component: DettagliComponent,
   },
   {
     path: 'commenti',

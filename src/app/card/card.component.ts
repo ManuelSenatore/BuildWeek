@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { Post, user } from '../post';
 
@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
 
   @Input() post!: Post
 
+  dettagli: boolean = false;
   user:any;
 
 
@@ -29,6 +30,13 @@ export class CardComponent implements OnInit {
       this.user = user;
       // this.subU.next(this.user)
     })
+  }
+  mostraDettagli(){
+    if(this.dettagli == false){
+      this.dettagli = true;
+    } else {
+      this.dettagli = false;
+    }
   }
   }
 
