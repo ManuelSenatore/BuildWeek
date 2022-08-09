@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,6 +15,10 @@ import { UsercardComponent } from './usercard/usercard.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { E404Component } from './e404/e404.component';
+import { TokenInterceptor } from './token.interceptor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DettagliComponent } from './dettagli/dettagli.component';
+import { CommentiComponent } from './commenti/commenti.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +34,24 @@ import { E404Component } from './e404/e404.component';
     UsercardComponent,
     LoginComponent,
     SignupComponent,
-    E404Component
+    E404Component,
+    DettagliComponent,
+    CommentiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,3 +18,18 @@ export interface user{
   name: string
   age: number
 }
+export interface UserLogin{
+  email: string
+  password: string
+}
+export interface AuthResponse {
+  accessToken: string
+  user: user
+}
+export interface SignUp{
+  username: string
+  email: string
+  password: string
+  name: string
+  age: number
+}
