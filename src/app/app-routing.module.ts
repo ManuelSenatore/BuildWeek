@@ -8,17 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserComponent } from './user/user.component';
+import { UserpostComponent } from './userpost/userpost.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    children: [
-      {
-        path: 'id',
-        component: CommentiComponent
-      }
-  ]
   },
   {
     path: 'login',
@@ -31,20 +26,25 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
-  // {
-  //   path: 'commenti',
-  //   component: CommentiComponent,
-  // },
+  {
+    path: 'commenti',
+    component: CommentiComponent,
+  },
   {
     path: 'addpost',
     component: AddPostComponent,
   },
   {
+    path: 'userpost',
+    component: UserpostComponent,
+  },
+  {
     path: '**',
     component: E404Component
   },
+
 
 ];
 

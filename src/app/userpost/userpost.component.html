@@ -1,1 +1,3 @@
-<p>userpost works!</p>
+<div>
+  <app-usercard *ngFor="let p of arrayPost; index as i" [post]="p" [index] = i (customEvent)="delFromArr($event)"></app-usercard>
+</div>

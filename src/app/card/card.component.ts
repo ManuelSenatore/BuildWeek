@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { Post, user } from '../post';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-card',
@@ -19,7 +20,7 @@ export class CardComponent implements OnInit {
   subU = new BehaviorSubject<any>({})
   obsU = this.subU.asObservable();
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient, private post$: PostService) { }
 
   ngOnInit(): void {
     this.user = this.getUser();
@@ -37,6 +38,10 @@ export class CardComponent implements OnInit {
     } else {
       this.dettagli = false;
     }
+  }
+  dammiId(){
+    this.post$.getPostId(this.post.id)
+    console.log(this.post.id);
   }
   }
 
