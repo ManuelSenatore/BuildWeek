@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { user } from '../post';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  user: user[] = [];
+
+  constructor(private auth$: AuthService) { }
 
   ngOnInit(): void {
+   this.auth$.myAccount();
+   this.user = this.auth$.account
+   console.log(this.user);
   }
 
 }

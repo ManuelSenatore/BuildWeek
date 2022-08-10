@@ -18,6 +18,7 @@ import { E404Component } from './e404/e404.component';
 import { TokenInterceptor } from './token.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommentiComponent } from './commenti/commenti.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CommentiComponent } from './commenti/commenti.component';
     LoginComponent,
     SignupComponent,
     E404Component,
-    CommentiComponent
+    CommentiComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,

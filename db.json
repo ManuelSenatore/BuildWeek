@@ -17,6 +17,24 @@
       "autore": 1,
       "title": "lalllaal",
       "body": "se of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+    },
+    {
+      "autore": 8,
+      "title": "aaaaaaaa",
+      "body": "aaaaaaaaaaaaaaa",
+      "id": 3
+    },
+    {
+      "autore": 3,
+      "title": "urlo",
+      "body": "ce la faremo",
+      "id": 4
+    },
+    {
+      "autore": 3,
+      "title": "sdvsdvdsv",
+      "body": "cascsacascsacasc",
+      "id": 5
     }
   ],
   "comments": [
@@ -91,6 +109,14 @@
       "name": "ssss",
       "age": 2,
       "id": 7
+    },
+    {
+      "email": "tommy@tommy.t",
+      "password": "$2a$10$yWo4kKDP12xRYAjy4sp2Xe5av9k8wigxVpEVcsax7bYfGK53v/hkW",
+      "username": "frog",
+      "name": "tommaso",
+      "age": 25,
+      "id": 8
     }
   ]
 }

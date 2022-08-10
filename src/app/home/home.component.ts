@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AuthService } from '../auth.service';
+import { UserLogin } from '../post';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth$: AuthService) { }
+
+  isLogged!: boolean | UserLogin
+
+  sub!: Subscription
 
   ngOnInit(): void {
+    this.sub = this.auth$.authSub.subscribe((state) => {
+      this.isLogged = state;
+  })
   }
 
 }

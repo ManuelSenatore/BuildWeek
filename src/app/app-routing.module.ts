@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddPostComponent } from './add-post/add-post.component';
 import { AuthGuard } from './auth.guard';
 import { CommentiComponent } from './commenti/commenti.component';
 import { E404Component } from './e404/e404.component';
@@ -11,7 +12,13 @@ import { UserComponent } from './user/user.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    children: [
+      {
+        path: 'id',
+        component: CommentiComponent
+      }
+  ]
   },
   {
     path: 'login',
@@ -26,14 +33,19 @@ const routes: Routes = [
     component: UserComponent,
     canActivate: [AuthGuard]
   },
+  // {
+  //   path: 'commenti',
+  //   component: CommentiComponent,
+  // },
   {
-    path: 'commenti',
-    component: CommentiComponent,
+    path: 'addpost',
+    component: AddPostComponent,
   },
   {
     path: '**',
     component: E404Component
   },
+
 ];
 
 @NgModule({
