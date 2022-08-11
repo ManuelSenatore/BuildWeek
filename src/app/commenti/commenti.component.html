@@ -9,5 +9,5 @@
 </div>
 <div class="commenti">
   <h2>Commenti</h2>
-<app-comment-card *ngFor="let c of arrayCommenti" [commento]="c"></app-comment-card>
+<app-comment-card *ngFor="let c of arrayCommenti ; index as i" [index]="i" [commento]="c" (customEventTrash)="delComment($event)"></app-comment-card>
 </div>

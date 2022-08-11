@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BehaviorSubject, Subscription } from 'rxjs';
+import { AuthService } from '../auth.service';
 import { Post, user } from '../post';
 import { PostService } from '../post.service';
 
@@ -13,17 +14,23 @@ export class CardComponent implements OnInit {
 
   @Input() post!: Post
 
+  mineP: boolean = false;
+
   dettagli: boolean = false;
   user:any;
 
+  account: user[] = []
 
   subU = new BehaviorSubject<any>({})
   obsU = this.subU.asObservable();
 
-  constructor( private http: HttpClient, private post$: PostService) { }
+  constructor( private http: HttpClient, private post$: PostService,private auth$: AuthService) { }
 
   ngOnInit(): void {
     this.user = this.getUser();
+    this.auth$.myAccount()
+    this.account = this.auth$.account
+    this.mineP = this.auth$.isMine(this.post.autore, this.account[0].id);
   }
 
   getUser(){

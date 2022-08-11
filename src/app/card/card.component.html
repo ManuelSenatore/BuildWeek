@@ -1,4 +1,4 @@
-<div class="user">
+<div class="user" [ngClass]="{'mineP': mineP}">
   <h4>Nome: {{user[0].name}}</h4>
   <h4>Username: {{user[0].username}}</h4>
   <h4 *ngIf="dettagli">Email: {{user[0].email}}  </h4>

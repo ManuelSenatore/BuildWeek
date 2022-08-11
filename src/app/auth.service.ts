@@ -79,4 +79,11 @@ myAccount(){
     }
     return false;
   }
+  isMine(autor:any, myId:any){
+    if(autor == myId){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }

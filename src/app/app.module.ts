@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommentiComponent } from './commenti/commenti.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { CommentCardComponent } from './comment-card/comment-card.component';
+import { ModUserComponent } from './mod-user/mod-user.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CommentCardComponent } from './comment-card/comment-card.component';
     E404Component,
     CommentiComponent,
     AddPostComponent,
-    CommentCardComponent
+    CommentCardComponent,
+    ModUserComponent
   ],
   imports: [
     BrowserModule,

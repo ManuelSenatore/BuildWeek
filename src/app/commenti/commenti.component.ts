@@ -69,4 +69,7 @@ export class CommentiComponent implements OnInit {
       this.form.reset()
     }
   }
+  delComment(index: number){
+    this.arrayCommenti.splice(index, 1)
+  }
 }

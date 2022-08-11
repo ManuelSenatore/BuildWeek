@@ -26,8 +26,14 @@
     },
     {
       "autore": 3,
-      "title": "asaad",
-      "body": "vfvvtbtb",
+      "title": "ciaoooooooaa",
+      "body": "avanti tuttaaaa",
+      "id": 4
+    },
+    {
+      "autore": 3,
+      "title": "scemo",
+      "body": "freatm",
       "id": 5
     }
   ],
@@ -69,10 +75,22 @@
       "id": 5
     },
     {
+      "idPost": 5,
+      "idUser": 3,
+      "body": "vvfdbdfbdf",
+      "id": 8
+    },
+    {
+      "idPost": 5,
+      "idUser": 3,
+      "body": "bbbbb",
+      "id": 9
+    },
+    {
       "idPost": 0,
       "idUser": 3,
-      "body": "cazzo",
-      "id": 6
+      "body": "uuuuuuuuuu",
+      "id": 10
     }
   ],
   "users": [
@@ -103,7 +121,7 @@
     {
       "email": "123@123.123",
       "password": "$2a$10$6ngnw6dhpe2bW6jNc34GEuZpTrKDcAANfM8Y3k7cfmWsy/.CAMZG.",
-      "username": "asasasas",
+      "username": "wewe",
       "name": "asasas",
       "age": 55,
       "id": 3

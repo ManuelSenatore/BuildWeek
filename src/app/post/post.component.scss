@@ -17,6 +17,10 @@
   div{
     padding: 2rem 0;
   }
+  .flex{
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 svg{
   width: 100%;

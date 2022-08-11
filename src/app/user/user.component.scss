@@ -23,6 +23,9 @@
     button{
       background-color: #77A8A6;
     }
+    .mod{
+      background-color: #0F485A;
+    }
   }
   .marrone{
 
@@ -69,7 +72,7 @@ h4{
   }
 }
 button{
-  margin: 1rem 0;
+  margin: 1rem 0 .5rem 0;
   background-color: #A89488 ;
   color: white;
   padding: .7em 4em;
@@ -83,4 +86,5 @@ button:hover{
   cursor: pointer;
   transform: translateY(4px);
 }
+
 

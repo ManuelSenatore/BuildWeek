@@ -3,7 +3,7 @@
   </svg>
 <div class="container">
   <h2>Post</h2>
-<div>
+<div class=" flex">
   <app-card *ngFor="let p of arrayPost" [post]="p"></app-card>
 </div>
 <div class="spinnerdiv" *ngIf="arrayPost.length <= 0">

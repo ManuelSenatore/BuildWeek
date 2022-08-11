@@ -26,7 +26,6 @@ export class UserpostComponent implements OnInit {
       })
       }
       delFromArr(index: number){
-
         this.arrayPost.splice(index, 1);
       }
   }

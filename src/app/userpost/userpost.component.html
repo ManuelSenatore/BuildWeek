@@ -1,3 +1,6 @@
-<div>
-  <app-usercard *ngFor="let p of arrayPost; index as i" [post]="p" [index] = i (customEvent)="delFromArr($event)"></app-usercard>
+<div class="container">
+  <h2>I tuoi Post</h2>
+  <app-usercard *ngFor="let p of arrayPost; index as i" [post]="p" [index] = i (customEvent)="delFromArr($event)" ></app-usercard>
 </div>
+
+

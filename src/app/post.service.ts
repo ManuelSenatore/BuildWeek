@@ -48,5 +48,11 @@ export class PostService {
       console.log(res)
     })
     console.log("daje")
+  }
+  deleteComment(commentoid:number){
+    this.http.delete("http://localhost:3000/api/comments/" + commentoid).subscribe((res) => {
+    console.log(res)
+  })
+  console.log("daje")
 }
 }

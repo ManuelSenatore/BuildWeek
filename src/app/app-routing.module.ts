@@ -6,6 +6,7 @@ import { CommentiComponent } from './commenti/commenti.component';
 import { E404Component } from './e404/e404.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ModUserComponent } from './mod-user/mod-user.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserComponent } from './user/user.component';
 import { UserpostComponent } from './userpost/userpost.component';
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: 'userpost',
     component: UserpostComponent,
+  },
+  {
+    path: 'moduser',
+    component: ModUserComponent,
   },
   {
     path: '**',

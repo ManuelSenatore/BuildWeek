@@ -14,10 +14,13 @@ div{
  p{
   margin: 0 auto;
  }
- svg{
+ .spunta{
   position: relative;
   color: #000;
   bottom: -2.8rem;
   right: 20%;
+ }
+ .monnezza{
+  cursor: pointer;
  }
 }
