@@ -1,4 +1,4 @@
-<div class="post">
+<div class="post" [ngStyle]="{'filter': modal ? 'blur(10px)': 'blur(0px)'}">
   <h2>Modifica User</h2>
   <div class="flex">
     <span><svg (click)="clickMT()" width="30" height="31" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,16 +51,17 @@
   </div>
 </div>
 
-<!-- <div class="modal hidden" *ngIf="modal">
-  <div class="modalBox">
-      <div class="modalH"></div>
-      <div class="modalBody">
-          <p class="modalText">Vuoi procedere con l'azione?</p>
-          <div class="modalBt">
-              <button id="annulla" (click)="closeModal()">Annulla</button>
-              <button id="accetta" (click)="deletePost()" class="elimina">Accetta</button>
-          </div>
-      </div>
-
-  </div>
-</div> -->
+<div class="modal" *ngIf="modal">
+ <div class="modal-body">
+  <form [formGroup]="form" (ngSubmit)="confirmPass()">
+    <p>Conferma la tua email per modificare</p>
+    <span *ngIf="modalEr">
+      <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.2V8.4C0 9.0618 0.5382 9.6 1.2 9.6H3.3L5.4 12L7.5 9.6H9.6C10.2618 9.6 10.8 9.0618 10.8 8.4V1.2C10.8 0.5382 10.2618 0 9.6 0H1.2C0.5382 0 0 0.5382 0 1.2ZM4.8 1.8H6V5.4H4.8V1.8ZM4.8 6.6H6V7.8H4.8V6.6Z" fill="#CC0000"/>
+        </svg> Email errata
+    </span>
+    <input type="email" formControlName="email" placeholder="email">
+    <button type="submit" class="modifica">Conferma</button>
+  </form>
+ </div>
+</div>

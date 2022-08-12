@@ -7,8 +7,8 @@
     "/comments/": "/comments",
     "/posts/:id/comments/": "/comments?postID=:idPost",
     "/users/": "/users",
-
-    "/users/:id": "/users?id=:id",
+    "/modusers/:id" : "/users/:id",
+    "/getusers/:id": "/users?id=:id",
     "posts": 664,
     "comments": 664,
     "users":664

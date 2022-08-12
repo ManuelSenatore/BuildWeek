@@ -15,6 +15,8 @@ export class AuthService {
 
   account = []
 
+  mine: boolean = false;
+
   helper = new JwtHelperService();
 
 
@@ -53,6 +55,7 @@ export class AuthService {
     localStorage.removeItem('token');
     localStorage.removeItem('id')
     this.authSub.next(false);
+    this.mine = false;
   }
 
   // whoIsLogged(){
@@ -65,7 +68,7 @@ export class AuthService {
 myAccount(){
   if(localStorage.getItem("token") && localStorage.getItem("id")){
     let id = localStorage.getItem("id")
-    this.http.get<[]>("http://localhost:3000/api/users/" + id).subscribe((user) => {
+    this.http.get<[]>("http://localhost:3000/api/getusers/" + id).subscribe((user) => {
      this.account = user;
     })
   }

@@ -24,8 +24,15 @@ export class ModUserComponent implements OnInit {
 
   account: user[] = []
 
+  form!: FormGroup
+
+  modalEr: boolean = false
+
 
   constructor(private post$: PostService, private fb: FormBuilder, private http: HttpClient, private auth$: AuthService) {
+    this.form = this.fb.group({
+      email: ["", [Validators.required]]
+    })
     this.formT = this.fb.group({
       title: ["", [Validators.required]],
     })
@@ -41,7 +48,7 @@ export class ModUserComponent implements OnInit {
 
 
   modTitle(){
-    this.http.patch('http://localhost:3000/api/users/' + this.account[0].id, {"username":this.formT.controls['title'].value}).subscribe((res) => {
+    this.http.patch('http://localhost:3000/api/modusers/' + this.account[0].id, {"username":this.formT.controls['title'].value}).subscribe((res) => {
      console.log(res);
      this.account[0].username = this.formT.controls['title'].value
     })
@@ -49,7 +56,7 @@ export class ModUserComponent implements OnInit {
    }
 
    modBody(){
-     this.http.patch('http://localhost:3000/api/users/' + this.account[0].id, {"name":this.formB.controls['body'].value}).subscribe((res) => {
+     this.http.patch('http://localhost:3000/api/modusers/' + this.account[0].id, {"name":this.formB.controls['body'].value}).subscribe((res) => {
       console.log(res);
       this.account[0].name = this.formB.controls['body'].value
      })
@@ -72,6 +79,17 @@ export class ModUserComponent implements OnInit {
      } else {
        this.activeMB = false
      }
+   }
+   confirmPass(){
+    console.log(this.account[0].email, this.form.controls['email'].value);
+
+    if(this.form.controls['email'].value === this.account[0].email){
+      this.modalEr = false
+      this.modal = false
+
+    }else {
+      this.modalEr = true
+    }
    }
 
 }

@@ -17,7 +17,9 @@ export class SignupComponent implements OnInit {
   isLogged!: boolean | UserLogin;
   sub!: Subscription
   match: boolean = false;
+  dirty: boolean = false;
 
+  emailEr: boolean = false;
   rPassword = "" ;
 
   error: boolean = false;
@@ -46,22 +48,25 @@ export class SignupComponent implements OnInit {
       "password" : this.form.controls["password"].value,
       "age" : this.form.controls["age"].value,
       }
+      if(this.form.controls["username"].value !== "" && this.form.controls["name"].value !== "" && this.form.controls["password"].value !== "" && this.form.controls["email"].value !== "" && this.form.controls["rPassword"].value !== "" && this.form.controls["age"].value !== ""){
+        this.dirty = false
+        //password
+        if(this.form.controls['rPassword'].value === this.form.controls["password"].value && this.form.controls['password'].value != ""){
+          this.match = false;
+          if(this.form.valid){
+            this.emailEr = false
+            this.error = false
+            this.auth$.signUp(obj)
+          } else {
+            this.error = true
+            this.emailEr = true
+          }
+        }else {
+          this.match = true;
+        }
+      } else {
+        this.dirty = true
+      }
 
-if(this.form.controls['rPassword'].value === this.form.controls["password"].value)
-{
-  if(!this.form.valid){
-  this.error = true
-  this.match = false
-  console.log('not valid', this.error, this.match)
-}
-else{this.auth$.signUp(obj)
-  console.log(this.form.value)}
-  this.match = false
-  this.error = false
-}
-else{
-  console.log('password not maching')
-  this.match = true
-}
 }
 }

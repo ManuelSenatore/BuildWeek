@@ -6,6 +6,6 @@
     <li><a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
     <li><a routerLink="/login" [routerLinkActive]="['active']" *ngIf="!isLogged">Login</a></li>
     <li><a routerLink="/signup" [routerLinkActive]="['active']" *ngIf="!isLogged">Signup</a></li>
-    <li><a (click)="logout()" *ngIf="isLogged">Logout</a></li>
+    <li><a routerLink="/" (click)="logout()" *ngIf="isLogged">Logout</a></li>
   </ul>
 </nav>

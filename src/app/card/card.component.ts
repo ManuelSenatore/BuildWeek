@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
 
   @Input() post!: Post
 
-  mineP: boolean = false;
+  mineP: boolean = this.auth$.mine;
 
   dettagli: boolean = false;
   user:any;
@@ -30,7 +30,8 @@ export class CardComponent implements OnInit {
     this.user = this.getUser();
     this.auth$.myAccount()
     this.account = this.auth$.account
-    this.mineP = this.auth$.isMine(this.post.autore, this.account[0].id);
+    this.auth$.mine = this.auth$.isMine(this.post.autore, this.account[0].id);
+    this.mineP = this.auth$.mine
   }
 
   getUser(){

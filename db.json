@@ -26,8 +26,8 @@
     },
     {
       "autore": 3,
-      "title": "ciaoooooooaa",
-      "body": "avanti tuttaaaa",
+      "title": "ciaooooo",
+      "body": "avanti tutta",
       "id": 4
     },
     {
@@ -35,6 +35,12 @@
       "title": "scemo",
       "body": "freatm",
       "id": 5
+    },
+    {
+      "autore": 9,
+      "title": "ooooo",
+      "body": "buongiorno",
+      "id": 6
     }
   ],
   "comments": [
@@ -91,6 +97,12 @@
       "idUser": 3,
       "body": "uuuuuuuuuu",
       "id": 10
+    },
+    {
+      "idPost": 2,
+      "idUser": 3,
+      "body": "hhhh",
+      "id": 11
     }
   ],
   "users": [
@@ -104,7 +116,7 @@
     },
     {
       "id": 1,
-      "username": "gioacchino69",
+      "username": "wewe",
       "email": "gio@chino.nochio",
       "password": "csadsadsadsad",
       "name": "gioacchino69 mariottide",
@@ -121,7 +133,7 @@
     {
       "email": "123@123.123",
       "password": "$2a$10$6ngnw6dhpe2bW6jNc34GEuZpTrKDcAANfM8Y3k7cfmWsy/.CAMZG.",
-      "username": "wewe",
+      "username": "weweww",
       "name": "asasas",
       "age": 55,
       "id": 3
@@ -165,6 +177,22 @@
       "name": "tommaso",
       "age": 25,
       "id": 8
+    },
+    {
+      "email": "aa@aa.aa",
+      "password": "$2a$10$UphfcZSWkEc/FqFQaaNSfObjWsNtdbhDDs4w.JfIYPgIwgcZ7XTje",
+      "username": "champignon",
+      "name": "giggin",
+      "age": 30,
+      "id": 9
+    },
+    {
+      "email": "12@12.12",
+      "password": "$2a$10$a8P6mlbzSYe65aBIDV2X9OuKk/k5DvqiFRbqqj5pefv4G3HywTwzq",
+      "username": "ceeee",
+      "name": "gbgbg",
+      "age": 45,
+      "id": 10
     }
   ]
 }
