@@ -35,7 +35,7 @@ export class CardComponent implements OnInit {
   }
 
   getUser(){
-    this.http.get<[]>("http://localhost:3000/api/users/" + this.post.autore).subscribe((user) => {
+    this.http.get<[]>("http://localhost:3000/api/getusers/" + this.post.autore).subscribe((user) => {
       this.user = user;
       // this.subU.next(this.user)
     })

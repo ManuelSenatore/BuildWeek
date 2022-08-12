@@ -55,7 +55,7 @@ export class AuthService {
     localStorage.removeItem('token');
     localStorage.removeItem('id')
     this.authSub.next(false);
-    this.mine = false;
+    // this.mine = false;
   }
 
   // whoIsLogged(){
