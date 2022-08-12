@@ -30,7 +30,7 @@ export class CommentCardComponent implements OnInit {
   }
 
   getUser(){
-    this.http.get<[]>("http://localhost:3000/api/users/" + this.commento.idUser).subscribe((user) => {
+    this.http.get<[]>("http://localhost:3000/api/getusers/" + this.commento.idUser).subscribe((user) => {
       this.user = user;
       console.log(this.user);
       console.log(user)

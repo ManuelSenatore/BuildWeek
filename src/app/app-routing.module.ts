@@ -36,14 +36,17 @@ const routes: Routes = [
   {
     path: 'addpost',
     component: AddPostComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'userpost',
     component: UserpostComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'moduser',
     component: ModUserComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: '**',

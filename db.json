@@ -26,8 +26,8 @@
     },
     {
       "autore": 3,
-      "title": "ciaooooo",
-      "body": "avanti tutta",
+      "title": "ciaooooo00",
+      "body": "avanti tuttabb",
       "id": 4
     },
     {
@@ -41,6 +41,12 @@
       "title": "ooooo",
       "body": "buongiorno",
       "id": 6
+    },
+    {
+      "autore": 3,
+      "title": "sdfsdf",
+      "body": "dasdasdasda",
+      "id": 7
     }
   ],
   "comments": [
@@ -133,8 +139,8 @@
     {
       "email": "123@123.123",
       "password": "$2a$10$6ngnw6dhpe2bW6jNc34GEuZpTrKDcAANfM8Y3k7cfmWsy/.CAMZG.",
-      "username": "weweww",
-      "name": "asasas",
+      "username": "weweww11",
+      "name": "asasas11",
       "age": 55,
       "id": 3
     },
@@ -193,6 +199,14 @@
       "name": "gbgbg",
       "age": 45,
       "id": 10
+    },
+    {
+      "email": "123@12.12",
+      "password": "$2a$10$UgJkudn/pX7KNW26XnSpeO9pz3yn/c3e8PLREGojtFJ16GvFq5RE.",
+      "username": "11",
+      "name": "qaaa",
+      "age": 44,
+      "id": 11
     }
   ]
 }
